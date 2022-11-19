@@ -131,10 +131,10 @@ const Footer = () => {
 
     emailjs
       .sendForm(
-        "service_aj4drc7",
-        "template_kv04f26",
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_TEMPLATE_ID,
         form.current,
-        "TElTiFDuc_lXvxJnb"
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY
       )
       .then(
         (result) => {
