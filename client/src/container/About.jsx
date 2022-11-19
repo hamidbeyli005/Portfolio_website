@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../client";
-import { AppWrap } from '../wrapper';
+import { AppWrap,MotionWrap } from '../wrapper';
 
 
 const Container = styled.div``;
@@ -14,6 +14,10 @@ const Title = styled.h2`
   text-align: center;
   color: var(--black-color);
   text-transform: capitalize;
+  @media screen and (min-width: 2000px) {
+    font-size: 3.8rem;
+
+  }
 `;
 
 const Text = styled.span`
@@ -107,4 +111,4 @@ const About = () => {
   );
 };
 
-export default AppWrap( About,"about");
+export default AppWrap(MotionWrap( About),"about");
